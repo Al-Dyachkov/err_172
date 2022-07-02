@@ -2,83 +2,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
         x:Class="Avalonia.NETCoreApp1.MainWindow"
         Title="Avalonia.NETCoreApp1">
-       <Grid RowDefinitions="*, Auto"
+    <Grid RowDefinitions="*, Auto"
           Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="250"/>
+            <ColumnDefinition Width="Auto"
+                              MinWidth="250" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Row="0"
-                 SelectionMode="AlwaysSelected">
-        </ListBox>
-        <GridSplitter Foreground="Transparent"
-                      Background="Transparent"
-                      Grid.Column="1"
-                      Grid.Row="0"
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Stretch"
-                      Width="4"
-                      ResizeBehavior="PreviousAndCurrent"
-                      ResizeDirection="Columns" />
         <ContentControl Grid.Column="1"
                         Grid.Row="0"
                         Margin="4,0,0,0">
-            <Grid Grid.ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,*">
-                <TextBlock Grid.Column="0"
-                           Grid.Row="0"
-                           HorizontalAlignment="Left"
-                           Text="Устройство"
-                           Classes="Body2"
-                           VerticalAlignment="Center" />
-                <ComboBox Grid.Row="0" 
-                          Grid.Column="1"
-                          Margin="12,4"
-                          PlaceholderText="[Выберите устройство]"/>
-                <TextBlock Grid.Column="0"
-                           Grid.Row="1"
-                           HorizontalAlignment="Left"
-                           Text="Размер буфера"
-                           Classes="Body2"
-                           VerticalAlignment="Center" />
-                <Slider Grid.Column="1" Grid.Row="1"
-                        IsSnapToTickEnabled="True"
-                        Classes="Discrete Ticks"
-                        Minimum="64"
-                        Margin="16"
-                        Maximum="256"
-                        TickFrequency="32"/>
-                <ToggleSwitch Grid.Column="1" Grid.Row="3"
-                              Content="Задержка при зацикливании" 
-                              Margin="16,0"/>
-                <TextBlock Grid.Column="0"
-                           Grid.Row="4"
-                           HorizontalAlignment="Left"
-                           Text="Задержка"
-                           Classes="Body2"
-                           VerticalAlignment="Center" />
-                <Slider Grid.Column="1" Grid.Row="4"
-                        IsSnapToTickEnabled="True"
-                        Margin="16"
-                        Classes="Discrete Ticks"
-                        Minimum="50"
-                        Maximum="500"
-                        TickFrequency="25"/>
-            </Grid>
+            <Slider VerticalAlignment="Center"
+                    IsSnapToTickEnabled="True"
+                    Classes="Discrete Ticks"
+                    Minimum="64"
+                    Margin="64"
+                    Maximum="256"
+                    TickFrequency="32" />
         </ContentControl>
-        <StackPanel Grid.Row="1"
-                    Grid.Column="1"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right">
-            <StackPanel.Styles>
-                <Style Selector="Button">
-                    <Setter Property="Margin"
-                            Value="2" />
-                </Style>
-            </StackPanel.Styles>
-        </StackPanel>
     </Grid>
-   
 </Window>

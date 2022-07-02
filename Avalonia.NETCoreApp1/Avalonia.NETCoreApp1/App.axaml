@@ -3,8 +3,10 @@
              xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
              x:Class="Avalonia.NETCoreApp1.App">
     <Application.Styles>
-        <themes:MaterialTheme BaseTheme="Dark" PrimaryColor="Blue" SecondaryColor="Teal" />
+        <themes:MaterialTheme BaseTheme="Dark"
+                              PrimaryColor="Blue"
+                              SecondaryColor="Teal" />
         <StyleInclude Source="avares://Material.Avalonia/Material.Avalonia.Templates.xaml" />
         <StyleInclude Source="avares://Material.DataGrid/DataGrid.xaml" />
     </Application.Styles>
-  </Application>
+</Application>
